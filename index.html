@@ -1,0 +1,344 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Automaticaly generated content, please update scripts/htmlgen.py for any change -->
+   <head>
+      <meta charset="UTF-8">
+      <title align="center">blah blah"</title>
+      <style type="text/css">
+        body, input, select, td, li, div, textarea, p {
+        	font-size: 11px;
+        	line-height: 16px;
+        	font-family: verdana, arial, sans-serif;
+        }
+
+        body {
+        	margin:5px;
+        	background-color:white;
+        }
+
+        h1 {
+        	font-size:16px;
+        	font-weight:bold;
+        }
+
+        h2 {
+        	font-size:14px;
+        	font-weight:bold;
+        }
+      </style>
+   </head>
+   <body>
+      <article>
+         <header>
+            <h1>Multi-rate attention architecture for fast streamable Text-to-speech spectrum modeling</h1>
+         </header>
+      </article>
+
+
+      <div>
+        <h2>Abstract</h2>
+        <p>Typical high quality text-to-speech (TTS) systems today use a two-stage architecture, with a spectrum model stage that generates spectral frames and a vocoder stage that generates the actual audio. High-quality spectrum models usually incorporate the encoder-decoder architecture with self-attention or bi-directional long short-term (BLSTM) units. While these models can produce high quality speech, they often incur O(L) increase in both latency and real-time factor (RTF) with respect to input length L. In other words, longer inputs leads to longer delay and slower synthesis speed, limiting its use in real-time applications. In this paper, we propose a multi-rate attention architecture that breaks the latency and RTF bottlenecks by computing a compact representation during encoding and recurrently generating the attention vector in a streaming manner during decoding. The proposed architecture achieves high audio quality (MOS of 4.31 compared to groundtruth 4.48), low latency, and low RTF at the same time. Meanwhile, both latency and RTF of the proposed system stay constant regardless of input lengths, making it ideal for real-time applications.</p>
+      </div>
+
+      <h2> Supplementary audio samples </h2>
+
+
+    <div>
+    <h2> English </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+        <th>./samples/English/Single_Spk/calling_static_9.wav</th>
+
+        <th>./samples/English/Multi_Spk/calling_static_9.wav</th>
+
+        <th>./samples/English/Multi_Spk_with_MT+GAN/calling_static_9.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/English/Single_Spk/cannot_static_1.wav</th>
+
+        <th>./samples/English/Multi_Spk/cannot_static_1.wav</th>
+
+        <th>./samples/English/Multi_Spk_with_MT+GAN/cannot_static_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/English/Single_Spk/alarm_dynamic_1.wav</th>
+
+        <th>./samples/English/Multi_Spk/alarm_dynamic_1.wav</th>
+
+        <th>./samples/English/Multi_Spk_with_MT+GAN/alarm_dynamic_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/English/Single_Spk/device_dynamic_1.wav</th>
+
+        <th>./samples/English/Multi_Spk/device_dynamic_1.wav</th>
+
+        <th>./samples/English/Multi_Spk_with_MT+GAN/device_dynamic_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/English/Single_Spk/calling_dynamic_1.wav</th>
+
+        <th>./samples/English/Multi_Spk/calling_dynamic_1.wav</th>
+
+        <th>./samples/English/Multi_Spk_with_MT+GAN/calling_dynamic_1.wav</th>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> French </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+        <th>./samples/French/Single_Spk/alarm_00050.wav</th>
+
+        <th>./samples/French/Multi_Spk/alarm_00050.wav</th>
+
+        <th>./samples/French/Multi_Spk_with_MT+GAN/alarm_00050.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/French/Single_Spk/device_1.wav</th>
+
+        <th>./samples/French/Multi_Spk/device_1.wav</th>
+
+        <th>./samples/French/Multi_Spk_with_MT+GAN/device_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/French/Single_Spk/calling_00443.wav</th>
+
+        <th>./samples/French/Multi_Spk/calling_00443.wav</th>
+
+        <th>./samples/French/Multi_Spk_with_MT+GAN/calling_00443.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/French/Single_Spk/music_1.wav</th>
+
+        <th>./samples/French/Multi_Spk/music_1.wav</th>
+
+        <th>./samples/French/Multi_Spk_with_MT+GAN/music_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/French/Single_Spk/weather_1.wav</th>
+
+        <th>./samples/French/Multi_Spk/weather_1.wav</th>
+
+        <th>./samples/French/Multi_Spk_with_MT+GAN/weather_1.wav</th>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> German </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+        <th>./samples/German/Single_Spk/alarm_00096.wav</th>
+
+        <th>./samples/German/Multi_Spk/alarm_00096.wav</th>
+
+        <th>./samples/German/Multi_Spk_with_MT+GAN/alarm_00096.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/German/Single_Spk/music_03023.wav</th>
+
+        <th>./samples/German/Multi_Spk/music_03023.wav</th>
+
+        <th>./samples/German/Multi_Spk_with_MT+GAN/music_03023.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/German/Single_Spk/device_2.wav</th>
+
+        <th>./samples/German/Multi_Spk/device_2.wav</th>
+
+        <th>./samples/German/Multi_Spk_with_MT+GAN/device_2.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/German/Single_Spk/contacts_01273.wav</th>
+
+        <th>./samples/German/Multi_Spk/contacts_01273.wav</th>
+
+        <th>./samples/German/Multi_Spk_with_MT+GAN/contacts_01273.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/German/Single_Spk/calling_00443.wav</th>
+
+        <th>./samples/German/Multi_Spk/calling_00443.wav</th>
+
+        <th>./samples/German/Multi_Spk_with_MT+GAN/calling_00443.wav</th>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> Italian </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+        <th>./samples/Italian/Single_Spk/calling_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk/calling_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk_with_MT+GAN/calling_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Italian/Single_Spk/alarm_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk/alarm_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk_with_MT+GAN/alarm_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Italian/Single_Spk/device_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk/device_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk_with_MT+GAN/device_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Italian/Single_Spk/music_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk/music_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk_with_MT+GAN/music_1.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Italian/Single_Spk/weather_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk/weather_1.wav</th>
+
+        <th>./samples/Italian/Multi_Spk_with_MT+GAN/weather_1.wav</th>
+</tr>
+
+            </table>
+        </div>
+        
+
+    <div>
+    <h2> Spanish </h2>
+      <table border = "1" class="inlineTable">
+    
+
+        <col width="300">
+        <col width="300">
+        <col width="300">
+     <tr> 
+
+        <th>Single_Spk</th>
+        <th>Multi_Spk</th>
+        <th>Multi_Spk_with_MT+GAN</th>
+</tr>
+<tr>
+
+        <th>./samples/Spanish/Single_Spk/device_dynamic_02.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk/device_dynamic_02.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk_with_MT+GAN/device_dynamic_02.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Spanish/Single_Spk/music_dynamic_08.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk/music_dynamic_08.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk_with_MT+GAN/music_dynamic_08.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Spanish/Single_Spk/calling_dynamic_09.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk/calling_dynamic_09.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk_with_MT+GAN/calling_dynamic_09.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Spanish/Single_Spk/alarm_static_01.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk/alarm_static_01.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk_with_MT+GAN/alarm_static_01.wav</th>
+</tr>
+<tr>
+
+        <th>./samples/Spanish/Single_Spk/cannot_static_01.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk/cannot_static_01.wav</th>
+
+        <th>./samples/Spanish/Multi_Spk_with_MT+GAN/cannot_static_01.wav</th>
+</tr>
+
+            </table>
+        </div>
+        
+
+   </body>
+</html>
+
