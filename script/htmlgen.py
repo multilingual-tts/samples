@@ -11,7 +11,7 @@ front_matter = r"""
 <!-- Automaticaly generated content, please update scripts/htmlgen.py for any change -->
    <head>
       <meta charset="UTF-8">
-      <title align="center">multilingual tts samples"</title>
+      <title align="center">multilingual-tts samples"</title>
       <style type="text/css">
         body, input, select, td, li, div, textarea, p {
         	font-size: 11px;
